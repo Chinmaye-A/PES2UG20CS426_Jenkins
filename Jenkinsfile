@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o PES2UG20CS426-1 try.cpp'
+                s 'g++ -o PES2UG20CS426-1 try.cpp'
                 echo "Build Successful"
             }
         }
@@ -15,7 +15,7 @@ pipeline {
     }
     post {
         always {
-            ech 'Pipeline completed'
+            echo 'Pipeline completed'
         }
         failure {
             echo 'Pipeline failed'
